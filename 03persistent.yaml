@@ -31,9 +31,11 @@ spec:
   zookeeper:
     replicas: 3
     storage:
-      - name: persistent-storage
-        persistentVolumeClaim:
-          claimName: ebs-claimKafka
+      type: persistent-claim
+      volumes:
+        - name: persistent-storage
+          persistentVolumeClaim:
+            claimName: ebs-claimKafka
   entityOperator:
     topicOperator: {}
     userOperator: {}
