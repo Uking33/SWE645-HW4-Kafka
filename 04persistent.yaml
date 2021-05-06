@@ -32,10 +32,8 @@ spec:
     replicas: 3
     storage:
       type: persistent-claim
-      volumes:
-        - name: persistent-storage
-          persistentVolumeClaim:
-            claimName: ebs-claimKafka
+      size: 100Gi
+      deleteClaim: false
   entityOperator:
     topicOperator: {}
     userOperator: {}
