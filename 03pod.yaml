@@ -4,7 +4,7 @@ metadata:
   name: api
 spec:
   containers:
-  - name: api
+  - name: app
     image: centos
     command: ["/bin/sh"]
     args: ["-c", "while true; do echo $(date -u) >> /data/out.txt; sleep 5; done"]
