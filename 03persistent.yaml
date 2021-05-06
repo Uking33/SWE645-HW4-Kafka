@@ -22,7 +22,7 @@ spec:
       log.message.format.version: "2.7"
       inter.broker.protocol.version: "2.7"
     storage:
-      type: jbod
+      type: persistent-claim
       volumes:
       - name: persistent-storage
         persistentVolumeClaim:
