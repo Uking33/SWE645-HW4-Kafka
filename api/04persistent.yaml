@@ -35,6 +35,22 @@ spec:
       size: 100Gi
       deleteClaim: false
   entityOperator:
-    topicOperator: {}
-    userOperator: {}
+    topicOperator: {
+      resources:
+        requests:
+          memory: 512Mi
+          cpu: “1”
+        limits:
+          memory: 512Mi
+          cpu: “1”
+    }
+    userOperator: {
+      resources:
+        requests:
+          memory: 512Mi
+          cpu: “1”
+        limits:
+          memory: 512Mi
+          cpu: “1”
+    }
 
