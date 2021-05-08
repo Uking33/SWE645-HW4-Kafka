@@ -1,7 +1,7 @@
 apiVersion: kafka.strimzi.io/v1beta2
 kind: Kafka
 metadata:
-  name: SWE645-HW4-cluster
+  name: swe645-hw4-cluster
 spec:
   kafka:
     version: 2.7.0
