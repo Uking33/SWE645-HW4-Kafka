@@ -1,7 +1,7 @@
 apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaTopic
 metadata:
-  name: swe645-hw4-topic
+  name: swe645-topic
   labels:
     strimzi.io/cluster: swe645-hw4-cluster
 spec:
