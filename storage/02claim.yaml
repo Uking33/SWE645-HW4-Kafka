@@ -4,7 +4,7 @@ metadata:
   name: ebs-claim
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   storageClassName: ebs-sc
   resources:
     requests:
