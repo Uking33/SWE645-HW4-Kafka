@@ -4,7 +4,7 @@ import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 public class HWProducer{
-    public static void main(String[] args) throws Exception{	      
+    public static void main(String[] args){	      
     // Check arguments length value
       if(args.length == 0){
          System.out.println("Enter topic name");
