@@ -1,11 +1,10 @@
-
 import java.util.Properties;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 public class producer{
-	  public static void main(String[] args) throws Exception{	      
-	  // Check arguments length value
+    public static void main(String[] args) throws Exception{	      
+    // Check arguments length value
       if(args.length == 0){
          System.out.println("Enter topic name");
          return;
