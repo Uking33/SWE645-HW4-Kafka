@@ -16,11 +16,11 @@ public class producer  {
       }
       //Assign topicName to string variable
       String topicName = args[0].toString();
-      if(args.length==1){
+      /*if(args.length==1){
          System.out.println("Enter json");
          return;
       }
-      String json = args[1].toString();      
+      String json = args[1].toString();    */  
       
       //Props
       Properties props = new Properties();
@@ -37,10 +37,12 @@ public class producer  {
       Producer<String, String> producer = new KafkaProducer
          <String, String>(props);
       Gson gson=new Gson();
-      Map<String, Object> map = gson.fromJson(json, new TypeToken<Map<String, Object>>() {}.getType());
+      /*Map<String, Object> map = gson.fromJson(json, new TypeToken<Map<String, Object>>() {}.getType());
       String uid = (String)map.get("uid");
       ProducerRecord<String, String> record = 
-    		  new ProducerRecord<String, String>(topicName, uid, json);
+    		  new ProducerRecord<String, String>(topicName, uid, json);*/
+      ProducerRecord<String, String> record = 
+    		  new ProducerRecord<String, String>(topicName, "1", "hello");
       producer.send(record);
       System.out.println("Message sent successfully");
       producer.close();
