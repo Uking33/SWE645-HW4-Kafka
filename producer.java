@@ -17,17 +17,18 @@ public class producer{
       Properties props = new Properties();
       
       //Assign localhost id
-      props.put("bootstrap.servers", "10.43.100.131:9092");   
+      props.put("bootstrap.servers", "10.43.100.131:9092");
+      //props.put("metadata.broker.list", "10.43.100.131:9092");
       //Set acknowledgements for producer requests.      
-      //props.put("acks", "all");      
+      props.put("acks", "all");      
       //If the request fails, the producer can automatically retry,
-      //props.put("retries", 0);      
+      props.put("retries", 0);      
       //Specify buffer size in config
-      //props.put("batch.size", 16384);      
+      props.put("batch.size", 16384);      
       //Reduce the no of requests less than 0   
       //props.put("linger.ms", 1);      
       //The buffer.memory controls the total amount of memory available to the producer for buffering.   
-      //props.put("buffer.memory", 102400);      
+      props.put("buffer.memory", 102400);      
       props.put("key.serializer", 
          "org.apache.kafka.common.serialization.StringSerializer");         
       props.put("value.serializer", 
@@ -38,11 +39,12 @@ public class producer{
 
       System.out.println("Start");
       for(int i = 0; i < 10; i++) {
-    	 System.out.println("Test:"+i);
-         producer.send(new ProducerRecord<String, String>(topicName, 
-            Integer.toString(i), Integer.toString(i)));    	  
+          producer.send(new ProducerRecord<String, String>(topicName, 
+             Integer.toString(i), Integer.toString(i)));  
+          System.out.println("send"+i);
       }
-	  System.out.println("Message sent successfully");
-	  producer.close();
+      
+      System.out.println("Message sent successfully");
+      producer.close();
    }
 }
