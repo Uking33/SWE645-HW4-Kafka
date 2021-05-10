@@ -16,12 +16,12 @@ public class producer{
       // create instance for properties to access producer configs   
       Properties props = new Properties();
       props.put("producer.type", "async");
-      props.put("bootstrap.servers", "10.43.15.133:9092");
+      props.put("bootstrap.servers", "local:9092");
       //props.put("metadata.broker.list", "10.43.100.131:9092");
       //Set acknowledgements for producer requests.      
-      props.put("acks", "all");      
+      //props.put("acks", "all");      
       //If the request fails, the producer can automatically retry,
-      props.put("retries", 0);            
+      //props.put("retries", 0);            
       props.put("key.serializer", 
          "org.apache.kafka.common.serialization.StringSerializer");         
       props.put("value.serializer", 
