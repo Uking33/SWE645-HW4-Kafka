@@ -16,16 +16,6 @@ spec:
     livenessProbe:
       initialDelaySeconds: 15
       timeoutSeconds: 5
-    resources:
-      requests:
-        memory: 300Mi
-        cpu: "3"
-      limits:
-        memory: 500Mi
-        cpu: "5"
-    jvmOptions:
-      -Xms: 300m
-      -Xmx: 300m
     listeners:
       - name: plain
         port: 9092
