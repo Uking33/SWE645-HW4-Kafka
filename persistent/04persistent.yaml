@@ -5,7 +5,7 @@ metadata:
 spec:
   kafka:
     version: 2.7.0
-    replicas: 3
+    replicas: 2
     logging:
       type: inline
       loggers:
@@ -16,13 +16,6 @@ spec:
     livenessProbe:
       initialDelaySeconds: 15
       timeoutSeconds: 5
-    resources:
-      requests:
-        memory: 100Mi
-        cpu: "500m"
-      limits:
-        memory: 200Mi
-        cpu: "1000m"
     listeners:
       - name: plain
         port: 9092
