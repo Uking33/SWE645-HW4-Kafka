@@ -24,8 +24,8 @@ spec:
         memory: 600Mi
         cpu: "3"
     jvmOptions:
-      -Xms: 500m
-      -Xmx: 5000m
+      -Xms: 1000m
+      -Xmx: 4000m
     listeners:
       - name: plain
         port: 9092
