@@ -17,7 +17,7 @@ public class producer{
       Properties props = new Properties();
       
       //Assign localhost id
-      props.put("bootstrap.servers", "swe645-hw4-cluster-kafka-bootstrap:9092");      
+      props.put("metadata.broker.list", "localhost:9092");      
       //Set acknowledgements for producer requests.      
       props.put("acks", "all");      
       //If the request fails, the producer can automatically retry,
