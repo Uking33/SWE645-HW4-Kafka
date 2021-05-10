@@ -38,7 +38,7 @@ spec:
     topicOperator:
       watchedNamespace: kafka
       reconciliationIntervalSeconds: 60
-      logging: (31)
+      logging:
         type: inline
         loggers:
           rootLogger.level: "INFO"
