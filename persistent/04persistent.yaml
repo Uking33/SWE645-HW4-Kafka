@@ -35,7 +35,7 @@ spec:
         type: internal
         tls: false
       - name: external
-        port: 9094port: 9094
+        port: 9094
         type: ingress
         tls: true
         configuration: 
