@@ -16,6 +16,10 @@ public class producer  {
       }
       //Assign topicName to string variable
       String topicName = args[0].toString();
+      if(args.length==1){
+         System.out.println("Enter json");
+         return;
+      }
       String json = args[1].toString();      
       
       //Props
