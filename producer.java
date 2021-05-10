@@ -17,7 +17,7 @@ public class producer{
       Properties props = new Properties();
       
       //Assign localhost id
-      props.put("broker.servers", "10.43.100.131:9092");      
+      props.put("bootstrap.servers", "10.43.100.131:9092");   
       //Set acknowledgements for producer requests.      
       props.put("acks", "all");      
       //If the request fails, the producer can automatically retry,
