@@ -36,12 +36,6 @@ spec:
       deleteClaim: false
   entityOperator:
     topicOperator:
-      watchedNamespace: kafka
-      reconciliationIntervalSeconds: 60
-      logging:
-        type: inline
-        loggers:
-          rootLogger.level: "INFO"
       resources:
         requests:
           memory: 512Mi
@@ -49,12 +43,4 @@ spec:
         limits:
           memory: 512Mi
           cpu: "1"
-    userOperator:
-      resources:
-        requests:
-          memory: 512Mi
-          cpu: "1"
-        limits:
-          memory: 512Mi
-          cpu: "1"
-
+    userOperator: {}
