@@ -18,14 +18,14 @@ spec:
       timeoutSeconds: 5
     resources:
       requests:
-        memory: 200Mi
-        cpu: "1"
+        memory: 64Mi
+        cpu: "250m"
       limits:
-        memory: 600Mi
-        cpu: "1.5"
+        memory: 128Mi
+        cpu: "500m"
     jvmOptions:
       -Xms: 1000m
-      -Xmx: 1500m
+      -Xmx: 3000m
     listeners:
       - name: plain
         port: 9092
