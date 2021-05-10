@@ -24,8 +24,8 @@ spec:
         memory: 100Mi
         cpu: "1"
     jvmOptions:
-      -Xms: 4096m
-      -Xmx: 4096m
+      -Xms: 100m
+      -Xmx: 100m
     listeners:
       - name: plain
         port: 9092
@@ -78,8 +78,8 @@ spec:
         memory: 100Mi
         cpu: "1"
     jvmOptions:
-      -Xms: 4096m
-      -Xmx: 4096m
+      -Xms: 100m
+      -Xmx: 100m
     storage:
       type: persistent-claim
       size: 100Mi
