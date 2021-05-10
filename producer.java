@@ -33,8 +33,8 @@ public class producer{
       Producer<String, String> producer = new KafkaProducer
          <String, String>(props);
       
-      ProducerRecord<String, String> record =
-    		               new ProducerRecord<String, String>("first_topic", "message from java" + Integer.toString(0));
+      ProducerRecord<String, StudentBean> record = 
+    		  new ProducerRecord<String, StudentBean>("first_topic", "message from java" + Integer.toString(0));
       producer.send(record, new Callback() {
            public void onCompletion(RecordMetadata recordMetadata, Exception e) {
         	   if (e == null) {

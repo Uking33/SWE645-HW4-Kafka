@@ -21,8 +21,8 @@ spec:
         memory: 200Mi
         cpu: "1"
       limits:
-        memory: 1Gi
-        cpu: "5"
+        memory: 600Mi
+        cpu: "3"
     jvmOptions:
       -Xms: 500m
       -Xmx: 5000m
