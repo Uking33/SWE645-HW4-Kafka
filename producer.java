@@ -21,7 +21,7 @@ public class producer  {
       //Props
       Properties props = new Properties();
       //props.put("producer.type", "async");
-      props.put("bootstrap.servers", "localhost:9092");
+      props.put("bootstrap.servers", "10.43.203.5:9092");
       //props.put("metadata.broker.list", "10.43.100.131:9092");
 	  //props.put("metadata.broker.list", "10.22.10.139:9092");
       props.put("acks", "0");
