@@ -35,6 +35,19 @@ spec:
       size: 100Mi
       deleteClaim: false
   entityOperator:
-    topicOperator: {}
+    topicOperator:
+      watchedNamespace: kafka
+      reconciliationIntervalSeconds: 60
+      logging: (31)
+        type: inline
+        loggers:
+          rootLogger.level: "INFO"
+      resources:
+        requests:
+          memory: 512Mi
+          cpu: "1"
+        limits:
+          memory: 512Mi
+          cpu: "1"
     userOperator: {}
 
