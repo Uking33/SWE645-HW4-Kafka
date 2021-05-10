@@ -35,10 +35,10 @@ public class producer{
       props.put("buffer.memory", 33554432);
       
       props.put("key.serializer", 
-         "org.apache.kafka.common.serializa-tion.StringSerializer");
+         "org.apache.kafka.common.serialization.StringSerializer");
          
       props.put("value.serializer", 
-         "org.apache.kafka.common.serializa-tion.StringSerializer");
+         "org.apache.kafka.common.serialization.StringSerializer");
       
       Producer<String, String> producer = new KafkaProducer
          <String, String>(props);
