@@ -1,19 +1,20 @@
 import java.util.Properties;
 import java.util.Arrays;
+
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
-public class consumer extends Thread {
+public class consumer {
    public static void main(String[] args) throws Exception {
       if(args.length == 0){
          System.out.println("Enter topic name");
          return;
       }
+      
       //Kafka consumer configuration settings
       String topicName = args[0].toString();
-      Properties props = new Properties();
-      
+      Properties props = new Properties();      
       props.put("bootstrap.servers", "localhost:9092");
       props.put("group.id", "test");
       props.put("enable.auto.commit", "true");
@@ -28,10 +29,6 @@ public class consumer extends Thread {
       
       //Kafka Consumer subscribes list of topics here.
       consumer.subscribe(Arrays.asList(topicName));
-      
-      //print the topic name
-      System.out.println("Subscribed to topic " + topicName);
-      int i = 0;
       
       while (true) {
          ConsumerRecords<String, String> records = consumer.poll(100);
